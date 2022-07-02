@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container{
+    column-width: 3;
+max-width: 1200px;
+margin: auto;
+}
+/*column-count는 inline-block을 사용해줘야 높이가 동일하게 맞춰짐   */
+
+figure{
+    width: 320px;
+    display: inline-block;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0, .35);
+    margin: 1rem;
+}
+figure img{
+    width: 100%;
+}
+figcaption{
+    border-top:1px solid #aaa;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* float은 부모의 공간이 있어야 들어감 */
+/* inline-block은 베이스라인을 기준으로 맞춰짐 */
+/* flex 부모 넓이에 상관없이 nowrap으로 붙음, top line을 기준으로 맞춤, 가장 큰 높이값 기준으로 맞춰짐 */

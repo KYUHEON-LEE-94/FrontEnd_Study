@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{background: #eef1f2;}
+
+.flex{
+    display: flex;
+    justify-content: space-between;}
+
+header{
+    background: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+    height: 100px;
+}
+header::after{
+    position: absolute;
+    width: 100%;
+    top:100px;
+    height: 0;
+    content: '';
+    height: 0;
+    background: #eee;
+    border-bottom: 3px solid black;
+    transition: .35s;
+}
+header:hover::after{
+    height: 200px;
+    top:110px;
+}
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100px;
+    align-items: center;
+    margin: auto;
+}
+nav{
+    width: 765px;
+    position:relative;
+    padding-top: 20px;
+    top: 20px;
+}
+
+nav li a{display: block;}
+nav>ul{display: flex;}
+nav>ul li{flex:1;}
+li.main>a{
+    text-align: center; 
+    height: 60px;
+    /* text-indent: -9999px; */
+    color: transparent;
+    background-image: url(/넥슨피씨방/이미지/bg_gnb.gif);
+}
+li.main{position: relative;}
+li.main:hover .sub{
+    display: block;
+}
+
+ul.sub{
+    position: absolute;
+    z-index: 99;
+    display: none;
+    padding-top: 53px;
+    
+}
+
+ul.sub a{padding: 10px;}
+
+li.main:nth-child(1)>a{width: 82px;}
+li.main:nth-child(2)>a{width: 110px;
+background-position-x: -85px;}
+li.main:nth-child(3)>a{width: 68px;
+    background-position-x: -200px;}
+li.main:nth-child(4)>a{width: 76px;
+    background-position-x: -275px;}
+li.main:hover a{background-position-y:-70px ;}
+
+.container{
+    width: 1370px;
+    min-height:580px ;
+    margin: 50px auto;
+    
+    padding: 42px 0 40px;
+    vertical-align: baseline;
+}
+
+.main{
+    display: flex;
+    width: 712px;
+    flex-wrap: wrap;
+}
+
+.main>div{
+        width: 223px;
+        height: 200px;
+        margin-bottom: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+        margin: 15px 5px;
+}
+.main .wd2{
+    width: 456px;
+}
+.container>.main>div:hover{
+    background-position-y:-205px ;
+    }
+
+.bg_goods_info{background-image:url(/넥슨피씨방/이미지/bg_goods_info.gif)}
+.bg_pay_list{ background-image:url(/넥슨피씨방/이미지/bg_pay_list.gif)}
+.bg_game_play{background: url(/넥슨피씨방/이미지/bg_game_play.gif);}
+.bg_event_apply{background: url(/넥슨피씨방/이미지/bg_event_apply.gif);}
+.bg_ip_manage{background: url(/넥슨피씨방/이미지/bg_ip_manage.gif);}
+.bg_refund_apply{background: url(/넥슨피씨방/이미지/bg_refund_apply.gif);}
+.bg_taxInvoice{background: url(/넥슨피씨방/이미지/bg_taxInvoice.gif);}
+.bg_customer_center{background: url(/넥슨피씨방/이미지/bg_customer_center.gif);}
+.bg_remote_supply{background: url(/넥슨피씨방/이미지/bg_remote_supply.gif);}
+
+.notic{
+    padding: 30px;
+    background: white;
+}
+.notic h2{margin-bottom:10px ;}
+.notic p{
+    width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notic .date{width: 68px; font-size: 13px;}
+.notic_list li a{
+    display: flex;
+    padding: 5px 0;
+}
+
+aside{
+    width: 470px;
+    border: 1px solid black;
+}
+
+input[type='text']{display: block;}
+
