@@ -1,0 +1,190 @@
+@import url(/reset.css);
+
+html{
+    height: 99%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    height: 64px;
+}
+
+input{
+    display: block;
+    border: none;
+}
+
+.nav{
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 14px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.nav ul li{
+    line-height: 24px;
+}
+
+.gb_Ue{
+    width: 24px;
+    height: 24px;
+}
+
+.left_nav{
+    width: 200px;
+    justify-content: space-around;
+}
+
+.right_nav{
+    width: 277px;
+    justify-content: space-around;
+}
+
+.right_nav input{
+    text-align: center;
+    width: 96px;
+    height: 36px;
+    background: #1a73e8;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    border: 1px solid transparent;
+
+}
+
+
+
+/* --------right nav끝 */
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   align-items:center;
+   justify-content: end;
+}
+
+.logo{
+    position: relative;
+    top:150px;
+    height: 254px;
+}
+
+main img{
+    width: 272px;
+    justify-content: baseline;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+   justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+    background: white;
+    height: 140px;
+    
+}
+
+.fa-search{
+    width: 33px;
+    height: 44px;
+}
+
+
+.search .tia1 img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.goxjub{
+        position: relative;
+        width: 20px;
+         height: 20px;
+}
+
+form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 582px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid gray;
+}
+
+.sub_btn{
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ECT{
+    justify-content: space-around;
+    width: 584px;
+    height: 54px;
+}
+
+.ECT div{
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    background:#f8f9fa; ;
+    border-radius: 20%;
+}
+
+.ECT div:nth-child(1){width: 111px;}
+.ECT div:nth-child(2){width: 143px;}
+
+.blank{
+    height: 241px;
+}
+
+footer{
+    height: 100px;
+    top:10px;
+    padding-left: 21px;
+    background-color: #f8f9fa;
+}
+
+.policy{
+    height: 100%;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.row1{
+    box-sizing:content-box;
+    margin: 0;
+    width: 100%;
+    line-height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.left_policy, .right_policy{
+    width: 210px;
+    line-height: 100px;
+    justify-content: space-between;
+
+}
+
+
+
+.policy ul li{
+    display: block;
+}

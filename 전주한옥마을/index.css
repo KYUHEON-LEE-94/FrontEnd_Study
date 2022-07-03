@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Song+Myung&display=swap');
+@import url(/reset.css);
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+h1, h2, h3{
+    font-family: 'Song Myung', serif;
+}
+
+@media screen and (max-width:640px) {
+    body{
+        background: green;
+    }
+}
+
+@media screen and (min-width:641px) {
+    body{
+        background: beige
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body{
+        background: blue;
+    }
+}
