@@ -7,20 +7,144 @@ h1, h2, h3{
     font-family: 'Song Myung', serif;
 }
 
-@media screen and (max-width:640px) {
-    body{
-        background: green;
+#sect1, #sect3{max-width: 1200px; margin: auto;
+    
     }
+
+#sect2{background: #eee;}
+
+.inner{max-width: 1200px; 
+    margin: auto;
+    border: 1px solid black;
+}
+
+/* ------------------header------------------------------- */
+
+header .inner{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+header .inner nav ul{
+    display: flex;
+}
+/* --------mainbanner------------- */
+
+.mainbanner{height: 565px;
+    background: url(./img/main.unknown);
+    background-size: cover;
+    background-position: center 73% ;
+}
+
+/* -----section1---------- */
+#sect1{padding: 2rem;}
+#sect1 .col1{margin-bottom: 1rem;}
+#sect1 .col2 div{margin-bottom: 1rem;}
+
+#sect1 h2{font-size: 30px;}
+
+/* ------------section2------------------ */
+#sect2 .inner{padding: 1rem;}
+#sect2 figure img{width: 100%;}
+
+.next{text-align: center;}
+
+button{border: none;
+background: royalblue;
+padding: 0.5rem;
+font-size: 20px;
+color: #fff;
+}
+
+/* -------section3------- */
+#sect3{padding: 2rem 0;}
+#sect3 h2{text-align: center;}
+#sect3 article figure img{border-radius: 50%;}
+
+
+header .inner nav ul li{
+    white-space: nowrap;
+}
+
+.visuaLing{width: 100%;
+    text-align: center;
+    background-position: center 64%;
+    background-image: url(./attachimg.jpg);
+    background-size: cover;}
+
+nav{max-width: 900px;
+    min-width: 448px;
+}
+
+#sect3 article{
+    display: flex;  
+    align-items: center;  
+    gap:2;}
+
+/* ---------footer */
+
+footer{text-align: center;}
+
+@media screen and (max-width:640px) {
+    nav{display: none;}
+
+    article{padding: 1rem;}
+
+    article:nth-child(even) figure{
+        order:2;
+    }
+
+    article:nth-child(even) figure .desc{
+        order:1;
+    } 
 }
 
 @media screen and (min-width:641px) {
-    body{
-        background: beige
+    header .inner nav ul{
+        gap: 1rem;
     }
+    nav ul li a{font-size: 16px;}
 }
+    
 
 @media screen and (min-width:1024px) {
-    body{
-        background: blue;
+    header .inner nav ul{
+        gap: 5rem;;
     }
+    nav ul li a{font-size: 20px;}
+    #sect1{display: flex;}
+    #sect1, .col1, #sect1, .col2{width: 49%;}
+    #sect2 h2, #sect2 p{margin-bottom: 1rem; text-align: center;}
+    #sect2 ul{display: flex; justify-content: space-between;}
+    #sect2 ul li{width: 49%;}
+
+    #sect3{display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;}
+    #sect3 h2{
+        display: block;
+        width: 100%;
+        font-size: 25px;
+    }
+    #sect3 article{
+    display: flex;    
+    width: 49%;}
+
+    #sect3 article .desc{
+        display: block;
+        font-size: 18px;
+        font-weight: normal;
+        color: #000;
+        padding-bottom: 18px;
+        line-height: 20px;
+    }
+    #sect3 article .desc button{
+        margin-top: 0.4rem;
+        padding: 0.2rem;
+        font-size: 16px;
+    }
+    #sect3 article .desc h3{font-size: 20px;}
 }
