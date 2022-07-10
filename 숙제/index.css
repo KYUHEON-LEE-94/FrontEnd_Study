@@ -1,0 +1,56 @@
+/* ---공통---- */
+body{
+    width: 100%;
+    margin: auto;}
+
+body{
+     width: 100%;
+    margin: auto;}
+
+.flex{display: flex;}
+
+
+
+/* 헤더영역 */
+
+header > ul> li{
+    display: block;
+width: 100%;}
+
+.nav{
+    justify-content: space-around;  
+}
+
+.sub_nav{
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+}
+
+/* ----------main--- */
+
+.menu{
+    height: 60%;
+}
+
+.menu > ul{
+    display: inline-block;
+    display: flex;
+}
+
+
+
+
+@media screen and (max-width:576px){
+    /* 모바일 */
+
+}
+
+@media screen and (min-width: 996px){
+/* 태블릿 */
+}
+
+@media screen and (min-width: 995px) {
+    /* 컴퓨터 */
+}
+
