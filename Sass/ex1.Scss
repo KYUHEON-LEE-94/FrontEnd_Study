@@ -1,0 +1,18 @@
+.social{
+    list-style: none;
+    padding: 0;
+    width: 100px;
+    display: flex;
+    li{
+        border: 1px solid #000;
+        padding: 10px;
+        flex: 1;
+        text-align: center;
+        a{
+            color: #333;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+
+    }
+}

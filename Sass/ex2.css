@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container .btn {
+  background-color: #333;
+  color: white;
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  position: relative;
+}
+.btn-container .btn:hover {
+  background: transparent;
+  color: tomato;
+}
+.btn-container .btn::before, .btn-container .btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 1px solid tomato;
+  transition: 0.35s;
+  opacity: 0;
+}
+.btn-container .btn:hover::before {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+.btn-container .btn:hover::after {
+  opacity: 1;
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=ex2.css.map */
