@@ -1,0 +1,33 @@
+$cart: skyblue;
+$ok:royalblue;
+$cancle:red;
+
+
+
+
+
+    .buttons{
+        border:none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 5px 0px 10px rgba(0,0,0, 0.53);
+    }
+    }
+
+    
+.cart{
+    @extend .buttons;
+    background-color: $cart;
+}
+.ok{
+    @extend .buttons;
+    background-color: $ok;
+}
+.cancle{
+    @extend .buttons;
+    background-color: $cancle;
+}

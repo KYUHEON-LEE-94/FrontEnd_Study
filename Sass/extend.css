@@ -1,0 +1,23 @@
+.buttons, .cancle, .ok, .cart {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.buttons:hover, .cancle:hover, .ok:hover, .cart:hover {
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.53);
+}
+
+.cart {
+  background-color: skyblue;
+}
+
+.ok {
+  background-color: royalblue;
+}
+
+.cancle {
+  background-color: red;
+}/*# sourceMappingURL=extend.css.map */

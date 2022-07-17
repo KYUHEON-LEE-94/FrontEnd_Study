@@ -1,0 +1,47 @@
+@mixin  borderframe($radius) {
+    border-radius: $radius;
+   
+}
+
+.frame{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+    background: rgb(17, 134, 173);
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    margin: 1rem;
+    text-align: center;
+    line-height: 150px;
+    border: 5px solid tomato;
+
+    &:nth-child(1){
+        @include borderframe(10px)
+    }
+    &:nth-child(2){
+        @include borderframe(50px 2px 20px)
+    }
+    &:nth-child(3){
+        @include borderframe(50px)
+    }
+    &:nth-child(4){
+        @include borderframe(10% 30% 50% 100%)
+    }
+    &:nth-child(5){
+        @include borderframe(100% 0 0 0)
+    }
+    &:nth-child(6){
+        @include borderframe(50px 20px 10px 1px)
+    }
+    &:nth-child(7){
+        @include borderframe(20px)
+    }
+
+    &:nth-child(8){
+        @include borderframe(100% 0 100% 0)
+    }
+
+
+    }//div
+}//.frame

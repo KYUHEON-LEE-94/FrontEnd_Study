@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Raleway:wght@200&family=Roboto&family=Song+Myung&display=swap");
+body {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6rem;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: crimson;
+}
+
+p {
+  font-size: 15px;
+  font-color: #333;
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=mixin.css.map */

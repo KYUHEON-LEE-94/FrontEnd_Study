@@ -1,0 +1,38 @@
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+}
+.frame div {
+  background: rgb(17, 134, 173);
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  margin: 1rem;
+  text-align: center;
+  line-height: 150px;
+  border: 5px solid tomato;
+}
+.frame div:nth-child(1) {
+  border-radius: 10px;
+}
+.frame div:nth-child(2) {
+  border-radius: 50px 2px 20px;
+}
+.frame div:nth-child(3) {
+  border-radius: 50px;
+}
+.frame div:nth-child(4) {
+  border-radius: 10% 30% 50% 100%;
+}
+.frame div:nth-child(5) {
+  border-radius: 100% 0 0 0;
+}
+.frame div:nth-child(6) {
+  border-radius: 50px 20px 10px 1px;
+}
+.frame div:nth-child(7) {
+  border-radius: 20px;
+}
+.frame div:nth-child(8) {
+  border-radius: 100% 0 100% 0;
+}/*# sourceMappingURL=mixinvar.css.map */
