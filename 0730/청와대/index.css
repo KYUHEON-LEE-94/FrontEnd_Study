@@ -1,0 +1,192 @@
+@import url(/reset.css);
+html {
+  position: relative;
+}
+
+body {
+  background-image: url(./img1/bg-wrap.jpg);
+  background-size: auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.row ul li a {
+  color: white;
+  font-weight: bold;
+}
+.row img {
+  width: 300px;
+}
+
+.word {
+  width: 100%;
+  height: 100%;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+}
+.word p {
+  text-align: center;
+  color: white;
+}
+.word p strong {
+  color: rgb(255, 165, 0);
+}
+
+@media screen and (max-width: 576px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .row ul {
+    display: flex;
+  }
+  .row ul li {
+    padding: 10px;
+  }
+  .container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+  }
+  .container h2:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding-bottom: 40px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .container .reserve {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .reserve .col {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .container .reserve .col img {
+    width: 60px;
+    height: 60px;
+    padding: 10px 20px;
+  }
+  .container .reserve .col h2 {
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .container .reserve .col h2:after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: calc(90% - 12px);
+    transform: rotate(45deg) translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-top: solid #AAAAAA 2px;
+    border-right: solid #AAAAAA 2px;
+  }
+  .container .word {
+    padding: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  }
+  .container .word p {
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 577px) {
+  .row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+  .row ul {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0 0 0;
+  }
+  .row ul li a {
+    color: white;
+    font-weight: bold;
+  }
+  .row img {
+    width: 300px;
+  }
+  .container {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 100px 20px 100px;
+    margin: auto;
+  }
+  .container h2:nth-child(1) {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 30px auto;
+    color: white;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+  }
+  .container .reserve {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  .container .reserve .col {
+    width: 40%;
+    height: 30%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+  }
+  .container .reserve .col img {
+    width: 80px;
+  }
+  .container .reserve .col h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .container .word {
+    width: 100%;
+    height: 100%;
+  }
+  .container .word p {
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .container .word p strong {
+    color: rgb(255, 165, 0);
+  }
+}

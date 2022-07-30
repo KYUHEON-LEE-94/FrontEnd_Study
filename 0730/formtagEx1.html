@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Tag</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      min-width: 250px;
+      max-width: 800px;
+      margin: 50px auto;
+      gap: 5px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      padding: 5px;
+    }
+    .col {
+      padding: 5px;
+    }
+    .col-3 {
+      grid-column: span 3;
+    }
+    .col-2 {
+      grid-column: span 2;
+    }
+
+    h3 {
+      font-weight: normal;
+      font-size: 1;
+    }
+    select {
+      text-align: center;
+      padding: 5px;
+    }
+    textarea {
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <form action="/" method="get">
+      <label>사용자ID</label>
+      <!--name은 제출된 후 서버에서 폼 데이터(form data)를 참조하기 위해 사용되거나, 자바스크립트에서 요소를 참조하기 위해 사용됩니다. -->
+      <input type="text" name="userid" class="col-3" />
+      <label>비밀번호</label>
+      <input type="password" name="pwd" class="col-3" />
+      <!-- ----------------------------------------------------- -->
+
+      <h3>취미는?</h3>
+      <div class="col">
+        <!-- id와 for값이 같아야 label을 눌러도 checkbox에 체크가됨-->
+        <input type="checkbox" name="hobby1" id="play" />
+        <label for="play">운동</label>
+      </div>
+      <div class="col">
+        <input type="checkbox" name="hobby2" id="music" />
+        <label for="music">음악</label>
+      </div>
+      <div class="col">
+        <input type="checkbox" name="hobby3" id="game" />
+        <label for="game">게임</label>
+      </div>
+      <!-- -------------------라디오 버튼은 하나'만' 선택되어야 하기 때문에 name을 일치하게 해야한다.--------------------------------- -->
+      <h3>성별</h3>
+      <div class="col">
+        <input type="radio" name="gender" id="female" />
+        <label for="female">여성</label>
+      </div>
+      <div class="col">
+        <input type="radio" name="gender" id="male" />
+        <label for="male">남성</label>
+      </div>
+      <!-- ------------------------------ -->
+      <div class="col"></div>
+
+      <label for="edu">최종 학력</label>
+      <select name="education" id="edu" class="col-3">
+        <option value="">초등학교</option>
+        <option value="">중학교</option>
+        <option value="">고등학교</option>
+        <option value="">학사</option>
+        <option value="">석사</option>
+        <option value="">박사</option>
+      </select>
+      <!-- ------------------------------ -->
+      <label for="">생년월일</label>
+      <input type="date" name="" id="" class="col-3" />
+      <!-- ------------------------------ -->
+      <label for="">E-mail</label>
+      <input type="email" name="" id="" class="col-3" />
+      <!-- ------------------------------ -->
+      <label for="">글쓰기</label>
+      <textarea class="col-3" rows="10" cols="30"></textarea>
+      <!-- ------------------------------ -->
+      <label for="">이미지 선택</label>
+      <input type="file" class="col-3">
+      <!-- ------------------------------ -->
+      <input type="reset" class="col-2" />
+      <input type="submit" class="col-2" value="전송" />
+    </form>
+  </body>
+</html>
