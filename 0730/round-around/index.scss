@@ -1,0 +1,366 @@
+@import url(/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+// font-family: 'Noto Sans KR', sans-serif;
+.flex{
+    display: flex;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 1rem;
+}
+button{
+    background: transparent;
+    padding: .5rem 1rem;
+    color: white;
+    border: 1px solid white;
+}
+.textBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    display: block;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+.sticky{
+    height: 100vh;
+    width: 50%;
+    background-size: contain;
+    position: sticky;
+    top:0;
+}
+
+//section4,5
+.visual2{background-image: url(./img/visual02.jpg);}
+.visual3{background-image: url(./img/visual03.jpg);}
+//-------공통-----
+
+body{
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    max-width: 768px;
+    height: 100vh;
+    position: relative;
+}
+
+#sect1{
+
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    article{
+
+        img{
+            width: 200px;
+            height: 60px;
+        }
+        h1{
+            line-height: 14px;
+            font: {
+                size: 10px;
+            }
+        }
+        
+    }
+    .bg{
+        width: 100%;
+        height: 100%;
+        background-image: url(./img/visual01.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+}
+//---section1-----
+
+//---------sect2----
+section#sect2{
+    height: 80vh;;
+    background-image: url(./img/parallax_bg.jpg);
+    color: white;
+    background-repeat: no-repeat;
+    div{
+        width: 100%;
+        height: 100%;
+    }
+    h2{
+        font-size: 1.5rem;
+        line-height: 30px;
+        font-weight: normal;
+    }
+    p{
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+}
+
+//-------------sect3------
+section#sect3{
+    text-align: center;
+    h3{
+        font: {
+            size: 20px;
+        }
+    }
+    .row{
+        width: 100%;
+        height: inherit;
+        .grid{
+            display: grid;
+            width: 100%;
+            .banner1, .banner7{
+                background: #5c6f66;
+                counter-reset: white;
+            }
+            .banner1{
+                width: 100%;
+                .Textcon{
+                    height: 100%;
+                    color: white;
+                    .txtInner{
+                        width: 100%;
+                        height: 100%;
+                        a{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .banner2,.banner3,.banner4,.banner5,.banner6{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                 background-repeat: no-repeat;
+            }
+            .banner2{
+               background: url(./img/moment05.jpg);
+               background-size: contain;
+            }
+            .banner3{background-image: url(./img/moment04.jpg);}
+            .banner4{background-image: url(./img/2cda15b7452630064cc80e60239fd354.png)}
+            .banner5{background-image: url(./img/moment03.jpg);}
+            .banner6{background-image: url(./img/moment01.jpg);}
+        }
+    }
+}
+
+//-----sect4------
+
+#sect4{
+    width: 100%;
+    height: 100vh;
+    .bg{
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+#sect5{
+    width: 100%;
+    height: 100vh;
+    .bg{
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    #sect1{
+        height: 100%;
+        article{  
+            height: 100vw;
+            .bg{
+                height: 100%;
+                background-size:0vw 50vw;
+            }
+        }
+    }
+
+
+
+    #sect3{
+        width: 100%;
+        height: 100vh;
+        .grid{
+            grid-template-rows: repeat(4,150px);
+            grid-template-columns: repeat(3,1fr);
+            .banner1{
+                grid-column: span 2;
+                grid-row: span 2;
+                .Textcon{
+                    .txtInner{
+                        width: 100%;
+                        height: 100%;
+                        font: {
+                            size: 15px;
+                        }
+                        a{
+                            font-size: 8px;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+            .banner5{
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .banner7{
+             display: none;
+
+            }
+        }
+        .sticky{height: 50vh;}
+    }
+    #sect4{   
+        .sticky{
+            height: 50vh;
+            background-size: cover;
+
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+body{
+    max-width: 1200px;
+}
+
+#sect1{
+    flex-direction: row;
+    article{
+        height: inherit;
+    }
+    .bg{
+        width: 100%;
+        background-position: 50vw 0;
+    }
+}
+
+#sect3{
+    height: 40vh;
+    .row{
+        height: 100%;
+        .grid{
+            height: 90%;
+
+            display: grid;
+            grid-template-rows: repeat(7,1fr);
+            grid-template-columns: repeat(12,1fr);
+            background-size: cover;
+            background-repeat: no-repeat;
+            .banner6{
+                grid-column: 1/span 6;
+                grid-row: 1/span 7;
+            }
+            .banner1{
+                grid-column: 7/span 2;
+                grid-row: 1/span 4;
+                .Textcon{
+                    height: 100%;
+                    color: white;
+                    .txtInner{
+                        padding: 0 10px;
+                        height: 100%;
+                        font: {
+                            size: 12px;
+                        }
+                        a{
+                            font-size: 8px;
+                        }
+                    }
+                }
+
+
+            }
+            .banner2{
+                grid-row: 5/span 3;
+                grid-column: 7/span 2;
+            }
+            .banner3{
+                grid-row: 3/span 3;
+                grid-column: 9/span 4;
+            }
+            .banner4{
+                grid-row: 1/span 2;
+                grid-column: 11/span 2;
+            }
+            .banner5{
+                grid-row: 1/span 2;
+                grid-column: 9/span 2;
+            }
+            
+            .banner5{
+                grid-column: 3, 4;
+            }
+            .banner7{
+                grid-row: 6/span 2;
+                grid-column: 9/span 4;
+                p{
+                    color: white;
+                    font: {
+                        size: 8px;
+                    }
+                }
+            }
+    
+        }
+    }
+    
+    }
+    #sect4{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .sticky{
+            width: 100%;
+            height: 300vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+
+        }
+        .product{
+            width: 100%;
+            height: 100vh;
+        }
+
+    }
+
+    #sect5{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .sticky{
+            width: 100%;
+            height: 300vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+
+        }
+        .product{
+            width: 100%;
+            height: 100vh;
+        }
+
+    }
+}
+
