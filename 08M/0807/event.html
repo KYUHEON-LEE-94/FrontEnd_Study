@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        body{  font-size: 20px;}
+        #btn{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">버튼을 클릭해주세요</p>
+    <button id="btn" >Click</button>
+    <button id="btn2">클릭</button>
+
+</body>
+<script>
+    const btnElem = document.getElementById("btn")
+    //getElements 와 같이 다수의 값을 가져오는 명령어는 배열처리가 되므로, 인덱스 값을 이용해서 지정해서 불러와야한다.
+    const pElem = document.getElementById("message")
+    const test= document.getElementById("btn2");
+    // console.log(btnElem);
+    // console.log(pElem[0]);
+
+    function message(){
+        pElem.textContent = '버튼을 왜 클릭함?'
+    }
+   
+    // message()는 해당 함수를 실행한 상태. 그렇기때문에 눌렀을 '경우에' 실행을 원한다면  message로 입력.
+    btnElem.addEventListener("click", message);
+
+
+
+
+
+
+
+
+</script>
+</html>
