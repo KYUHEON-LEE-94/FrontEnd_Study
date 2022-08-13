@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <title>쿠팡</title>
+    <style>
+        .slideWrap{
+            position:absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .banner{
+            position: relative;
+            width: 100%;
+            height: 450px;
+        }
+        .banner img{
+            display: block;
+        }
+        .menu{
+            position: absolute;
+            z-index: 99;
+            left: 50%;
+            top:50%;
+            transform: translateX(300px) translateY(-50%);
+        }
+        .menu>li>a>img{
+            vertical-align: top;
+        }
+        .menu li.active{
+            border: 1px solid #00f;
+        }
+    </style>
+</head>
+<body> 
+    <div class="banner">
+        <ul class="menu">
+            <li><a href='./coupangIMG/slide_kitch.jpg'><img src="./coupangIMG/slide1.jpg" alt="주방용품BEST"></a></li>
+            <li><a href="./coupangIMG/slide_cide.jpg"><img src="./coupangIMG/slide2.jpg" alt="칠성사이다 트레비 펩시"></a></li>
+            <li><a href="./coupangIMG/slide_sale.jpg"><img src="./coupangIMG/slide3.jpg" alt="창고특가"></a></li>
+            <li><a href="./coupangIMG/slide_newtri.jpg"><img src="./coupangIMG/slide4.jpg" alt="뉴트리코어"></a></li>
+            <li><a href="./coupangIMG/Slide_MASK.jpg"><img src="./coupangIMG/slide5.jpg" alt="마스크"></a></li>
+            <li><a href="./coupangIMG/slide_bigsale.jpg"><img src="./coupangIMG/slide6.jpg" alt="특가 대방출"></a></li>
+        </ul>
+        <div class="slideWrap">
+            <div class="slide"><img src="./coupangIMG/Slide_MASK.jpg" alt=""></div>
+        </div>
+        
+    </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        //Jquery
+        //$('li a').click(function(e){
+            //  e.preventDefault();
+
+           // let change = $(this).attr('href');
+
+            //$('.slideWrap img').attr("src",change)
+
+            //$('li').removeClass('active') //li 클래스 전체의 active 클래스를 지우고,
+            //$(this).parent().addClass('active') //this의 부모클래스'만' active를 추가해준다.
+       //})
+
+            const menuList = document.querySelectorAll(".menu li");
+            const slideImg = document.querySelector('.slide img');
+
+            function remove(){
+                for(let i =0; i<menuList.length; i++){
+                    menuList[i].classList.remove('active');
+                }
+            }
+            
+            for(let i =0; i<menuList.length; i++){
+
+                menuList[i].querySelector('a').addEventListener('click', function(e){
+                    e.preventDefault()
+                    let href = this.getAttribute('href');
+                    slideImg.setAttribute('src', href);
+                    remove();
+                    this.parentElement.classList.add('active')
+                })
+            
+            }//for문
+
+            
+            
+
+
+
+    </script>
+
+</html>

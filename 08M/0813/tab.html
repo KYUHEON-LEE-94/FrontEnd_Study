@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함께나누는 이야기</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #aaa;
+        }
+        .story{
+            max-width: 1400px;
+            margin: 100px auto;
+            background-color: white;
+        }
+        ul.lists{
+            display: flex; 
+            justify-content: space-between;
+             gap: 1rem;
+
+            }
+        ul.lists li{
+            flex: 1;
+            margin-bottom: 1rem;    
+        }
+        ul.lists img{width: 100%;}
+        ul.movie{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        ul.movie li{
+            flex: 1  29%;
+            width: 33.333%;
+            height: 286px;
+            overflow: hidden;
+        }
+        ul.move li img{
+            height: 286px;
+        }
+        .tabmenu li{display: flex; height: 66px; align-items: center;}
+        .tabmenu ul li{flex: 1  ;}
+        .tabmenu ul li a{
+            display: block; 
+            height: 66px;
+            color: white;
+            font-size: 20px;
+        background: rgba(0,0,0, .5
+        );
+        line-height: 66px;
+    }
+    .tabmenu ul li.active a{
+        background: rgba(225,0,0, .5);
+    }
+    .tabcontents{
+        position: relative;
+        height: 200px;
+    }
+    .tab{
+        position: absolute;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="story">
+        <div class="tabmenu">
+            <ul>
+                <li><a href="#tabcontent1">관람후기</a></li>
+                <li><a href="#tabcontent2"></a>사진</li>
+                <li><a href="#tabcontent3"></a>영상</li>
+                <li><a href="#tabcontent4"></a>카드뉴스</li>
+            </ul>
+        </div>
+        <div class="tabcontents">
+            <div id="tabcontent1" class="tab">
+                <ul>
+                    <li><a href=""><img src="./청와대/chungIMG/관람후기1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/관람후기2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/관람후기3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/관람후기4.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent2" class="tab">
+                <ul class="lists">
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 개방 첫날의 풍경.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 원경.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 본관.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[등산로] 북악산 북측.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 상춘재.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 경내 풍경.jpg" alt=""></a></li>
+                    <li><a href=""><img src="./청와대/chungIMG/[청와대] 대통령 관저.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent3" class="tab">
+                <ul class="movie">
+                    <li><a href=""><img src="./청와대/chungIMG/" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent4" class="tab">
+                <ul class="lists">
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- https://www.opencheongwadae.kr/main/ -->
+</body>
+</html>
+

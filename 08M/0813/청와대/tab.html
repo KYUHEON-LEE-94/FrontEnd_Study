@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함께나누는 이야기</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .story{
+            max-width: 1400px;
+            margin: auto;
+        }
+        ul.lists{
+            display: flex; 
+            justify-content: space-between;
+             gap: 1rem;
+
+            }
+        ul.lists li{
+            flex: 1;
+            margin-bottom: 1rem;    
+        }
+        ul.lists img{width: 100%;}
+        ul.movie{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        ul.movie li{
+            width: 33.333%;
+            margin-bottom: 1ren;
+        }
+        ul.movie li img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="story">
+        <div class="tabmenu">
+            <ul>
+                <li><a href="#tabcontent1"></a></li>
+                <li><a href="#tabcontent2"></a></li>
+                <li><a href="#tabcontent3"></a></li>
+                <li><a href="#tabcontent4"></a></li>
+            </ul>
+        </div>
+        <div class="tabcontents">
+            <div id="tabcontent1">
+                <ul>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent2">
+                <ul class="lists">
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent3">
+                <ul class="movie">
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="tabcontent4">
+                <ul>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                    <li><a href=""><img src="" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- https://www.opencheongwadae.kr/main/ -->
+</body>
+</html>
+
