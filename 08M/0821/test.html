@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-tooltip='회원가입 버튼'>가입하기</button>
+    <button></button>
+</body>
+<script>
+    const btn=document.querySelector('button')
+//get
+console.log(btn.dataset.tooltip)
+//set
+btn.dataset.tooltip='탈퇴하기 버튼'
+console.log(btn.dataset.tooltip)
+</script>
+</html>

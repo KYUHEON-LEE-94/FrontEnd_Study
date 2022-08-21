@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="./JScustomFolder/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="index.css">
+    <title>stx중공업</title>
+</head>
+<body>
+    <header>
+        <h1><img src="./STXIMG/logo.gif" alt=""></h1>
+
+        <nav>
+            <ul>
+                <li><a href="#"><img src="./STXIMG/menu.gif" data-hover="./STXIMG/m01_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (1).gif" data-hover="./STXIMG/m02_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (2).gif" data-hover="./STXIMG/m03_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (3).gif" data-hover="./STXIMG/m04_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (4).gif" data-hover="./STXIMG/m05_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (5).gif" data-hover="./STXIMG/m06_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (6).gif" data-hover="./STXIMG/m07_on.gif"></a></li>
+                <li><a href="#"><img src="./STXIMG/menu (7).gif" data-hover="./STXIMG/m08_on.gif"></a></li>
+            </ul>
+
+            <!-- <ul class="ul2">
+                <li><a href="#"><img src="./STXIMG/사이트맵.gif" alt=""></a> </li>
+                <li><a href="#"><img src="./STXIMG/영문사이트.gif" alt=""></a></li>
+            </ul> -->
+
+        </nav>
+
+    </header>
+    <section>
+         <article>
+             <figure>
+                 <img src="./STXIMG/business.jpg" alt="">
+                 <img src="./STXIMG/point_red.png" alt="">
+                 <img src="./STXIMG/business.jpg" alt="">
+                 <img src="./STXIMG/business.jpg" alt="">
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="./STXIMG/company.jpg" alt="">
+                <img src="./STXIMG/point_red.png" alt="">
+                <img src="./STXIMG/company.jpg" alt="">
+                <img src="./STXIMG/company.jpg" alt="">
+            </figure>
+         </article>
+        <article>
+            <figure>
+                <img src="./STXIMG/pr.jpg" alt="">
+                <img src="./STXIMG/point_red.png" alt="">
+                <img src="./STXIMG/pr.jpg" alt="">
+                <img src="./STXIMG/pr.jpg" alt="">
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="./STXIMG/ir.jpg" alt="">
+                <img src="./STXIMG/point_red.png" alt="">
+                <img src="./STXIMG/ir.jpg" alt="">
+                 <img src="./STXIMG/ir.jpg" alt="">
+            </figure>>
+        </article>
+        <article>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238824.875564673!2d124.30852606196049!3d37.557068300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca26055555555%3A0x46318f52832e734a!2zU1RY7KSR6rO17JeF!5e0!3m2!1sko!2skr!4v1661061162302!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+    </section>
+    <div class="btn">
+        <a href="#" class="prev"><img src="./STXIMG/prev.png" alt=""></a>
+        <a href="#" class="next"><img src="./STXIMG/next.png" alt=""></a>
+    </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./JScustomFolder/jquery.mCustomScrollbar.js"></script>
+    <script src="custom.js"></script>
+    <script>
+      $('article').mCustomScrollbar({
+        theme:"minimal-dark",
+        autoHideScrollbar:true
+      });
+
+      $('a.prev').fadeOut(0);
+      let count = 0;
+      let left = $('section').css('left');
+
+      $('a.next').click(function(e){
+          e.preventDefault();
+          count++
+          $(this).addClass('on');
+          $('a.prev').fadeIn(500);
+          
+          if(count == 5 || count == 0){
+              $('section').animate({left:'0'}, function(){
+                  $('a.next').removeClass('on');
+                $('section').animate({left:'0'});
+                count = 0;
+            });
+
+            }else{
+                $('section').animate({left:'-=380'})
+            }
+      })
+
+      $('a.prev').click(function(e){
+        count-- 
+        $('a.next').removeClass('on');
+        e.preventDefault();
+        if(count <= 0){
+            $('a.prev').fadeOut(0);
+            $('section').animate({left:'0'});
+            count = 0;
+            
+        }else if (count > 0 ){
+            $(this).addClass('on');
+            $('section').animate({left:'+=380'}, function(){});
+        }
+      })
+    </script>
+</body>
+
+</html>

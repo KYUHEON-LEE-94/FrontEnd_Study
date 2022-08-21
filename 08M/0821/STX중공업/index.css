@@ -1,0 +1,91 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(./STX중공업IMG/bg_main.jpg);
+    overflow: hidden;
+}
+header{
+    width: 160px;
+    position: fixed;
+    background-color: #323232;
+    height: 100vh;
+    z-index: 99;
+}
+h1{
+    padding: 10px 0;
+    background-color: white;
+    text-align: center;
+}
+nav{
+    width:115px;
+    margin-top: 40px;
+    text-align: right;
+    margin-left: 10px;
+    padding: 0;
+}
+nav li{
+    margin-bottom: 28px;
+}
+article{
+
+    height: 100vh;
+}
+article img{
+    display: block;
+}
+article figure img:nth-child(1){
+    border-bottom:3px solid #cb2f33;
+
+}
+article figure img:nth-child(2){
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ul2{
+    display: block;
+    width: 150px;
+    display: flex;
+    border: 0.2px solid #eee;
+    margin: 0;
+    padding: 0;
+}
+.ul2 li{
+    margin: 0 5px;
+}
+nav li a::after{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 22px;
+    background: url(./STX중공업IMG/red_arr1.png) no-repeat right top;
+    padding-left: 7px;
+    opacity: 0;
+}
+
+nav li:hover a::after{
+    opacity: 1;
+}
+iframe{
+    width: 380px;
+    height: 480px;
+}
+section{
+    position: relative;
+    margin-left: 160px;
+    display: flex;
+}
+.btn{
+    position: fixed;
+    right: 0; top: 50%;
+    margin-top: -35px;
+    display: flex;
+}
+.btn a{
+    display: block;
+}
+.btn a.on{background-color: #cb2f33; float: left;
+margin-left: 1px;}
+.btn a{background-color: rgba(0, 0, 0, 0.5);}
