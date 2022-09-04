@@ -1,0 +1,229 @@
+@import url(/FrontEnd/reset.css);
+body {
+  width: 100%;
+  background-image: url(./img/bg-map-20200701.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.remote {
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.remote li {
+  width: 22px;
+  height: 22px;
+}
+.remote li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remote li a span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 3px solid transparent;
+}
+.remote li a.black span {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 3px solid #000;
+}
+.remote li a.white span {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 3px solid #fff;
+}
+
+section {
+  height: 100vh;
+}
+section article {
+  position: relative;
+  width: 1000px;
+  height: 660px;
+  margin: auto;
+  top: 137px;
+}
+section article figure {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 520px;
+  height: 650px;
+}
+section article .sprite {
+  background-image: url(./img/img-sprite-pc-20210406.png);
+  background-size: 1538px 1302px;
+}
+
+h1, h2 {
+  text-indent: -999999px;
+  background-image: url(./img/txt-sprite-pc-20210406.png);
+  background-repeat: no-repeat;
+  background-size: 838px 458px;
+}
+
+h1 {
+  position: fixed;
+  left: 60px;
+  top: 60px;
+  width: 110px;
+  height: 28px;
+}
+h1.red {
+  background-position: -641px -288px;
+}
+h1.white {
+  background-position: -641px -258px;
+}
+
+#sect1 {
+  background-color: #f1f1f1;
+  display: flex;
+}
+#sect1 h2 {
+  width: 445px;
+  height: 121px;
+  background-position: 0 0;
+}
+#sect1 figure .sprite {
+  position: absolute;
+  width: 310px;
+  height: 635px;
+  background-position-x: -1033px;
+  left: 200px;
+  bottom: 100px;
+}
+
+#sect2 {
+  background-color: #ffe054;
+}
+#sect2 h2 {
+  width: 203px;
+  height: 106px;
+  background-position: -447px -124px;
+}
+#sect2 .sprite {
+  background-position-y: -634px;
+}
+
+#sect3 {
+  background-color: #ff4242;
+}
+#sect3 h2 {
+  width: 192px;
+  height: 107px;
+  background-position: -447px -230px;
+}
+#sect3 .sprite {
+  width: 455px;
+  background-position-x: -584px;
+}
+
+#sect4 {
+  background-color: #fff;
+}
+#sect4 h2 {
+  width: 429px;
+  height: 106px;
+  background-position: 0px -352px;
+}
+#sect4 .sprite {
+  height: 634px;
+  background-position-x: 0px;
+}
+
+#sect5 h2 {
+  width: 443px;
+  height: 106px;
+  background-position: 0px -244px;
+  margin: auto;
+}
+#sect5 figure {
+  position: static;
+  width: 100%;
+  display: flex;
+}
+#sect5 figure .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#sect5 figure .col.col1 .sprite {
+  background-position-y: 0;
+}
+#sect5 figure .col.col2 .sprite {
+  background-position-y: -226px;
+}
+#sect5 figure .col .sprite {
+  width: 200px;
+  height: 200px;
+  background-position-x: -1334px;
+}
+
+#sect6 .inner {
+  position: relative;
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+  height: 50vh;
+}
+#sect6 .top .circle {
+  position: absolute;
+  width: 297px;
+  height: 297px;
+  background: #fff;
+  border-radius: 50%;
+}
+#sect6 .top .col1::after {
+  position: absolute;
+  content: "";
+  border-width: 12px 0 12px 26px;
+  border-style: solid;
+  border-color: #fff;
+  right: -10px;
+  bottom: 72px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(28deg);
+}
+#sect6 .top .col1.circle {
+  left: 0;
+  top: 0;
+}
+#sect6 .top .col2 {
+  display: inline-block;
+}
+#sect6 .top .col3::after {
+  position: absolute;
+  content: "";
+  border-width: 12px 0 12px 26px;
+  border-style: solid;
+  border-color: #fff;
+  left: 0;
+  bottom: 72px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(28deg);
+}
+#sect6 .top .col3.circle {
+  top: 150px;
+  right: 0;
+}
+#sect6 .bottom {
+  background-color: #f1f1f1;
+}
