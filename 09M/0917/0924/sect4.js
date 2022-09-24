@@ -8,6 +8,6 @@ sect4LiElems.forEach((elemnt, idx)=>{
 })
 
 function goToSlide(idx){
-    sect4slideWrap.style.left = (idx*100)+"%"
+    sect4slideWrap.style.left = (idx*-100)+"%"
     alert(idx*100+"%")
 }
