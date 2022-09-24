@@ -1,0 +1,152 @@
+@import url(/reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Metrophobic&family=Noto+Sans+KR&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.inner {
+  width: 1470px;
+  margin: auto;
+}
+
+header {
+  height: 155px;
+  background: #fff;
+}
+header .inner span.hover {
+  display: none;
+}
+header .inner a {
+  display: inline-block;
+}
+header .inner li.main > a {
+  color: #333;
+}
+header .inner .topgnb {
+  height: 76px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .inner .topgnb ul {
+  display: flex;
+}
+header .inner .topgnb .gnb li {
+  padding: 0 5px;
+}
+header .inner .topgnb .gnb li a {
+  font-weight: 100;
+}
+header .inner .topgnb .event li {
+  margin: 0 5px;
+}
+header .inner .topgnb .event a {
+  text-align: center;
+  color: white;
+  height: 36px;
+  padding: 0 20px;
+  margin-left: 5px;
+  line-height: 36px;
+}
+header .inner .topgnb .event li:nth-child(1) {
+  background: url(./img/wedding-icon.png);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-color: #139cae;
+  text-indent: 10px;
+  border-radius: 20px;
+}
+header .inner .topgnb .event li:nth-child(2) {
+  background-color: #9badb6;
+  border-radius: 20px;
+}
+header .inner .bottomgnb {
+  display: flex;
+  justify-content: space-between;
+}
+header .inner .bottomgnb li.main {
+  position: relative;
+}
+header .inner .bottomgnb li.main:hover > a {
+  color: #007aff;
+}
+header .inner .bottomgnb li.main > a {
+  padding-right: 20px;
+}
+header .inner .bottomgnb .sub {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+header .inner .bottomgnb .sub li {
+  padding: 3px 0;
+}
+header .inner .bottomgnb .sub li:hover a::after {
+  width: 100%;
+}
+header .inner .bottomgnb .sub li a {
+  color: #555;
+  position: relative;
+  font-size: 14px;
+}
+header .inner .bottomgnb .sub li a:hover a::after {
+  width: 100%;
+}
+header .inner .bottomgnb .sub li a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #007aff;
+  opacity: 0.3;
+  left: 0;
+  bottom: 2px;
+  transition: 0.35s;
+}
+header .inner .bottomgnb .lnb li.main.on {
+  padding-right: 40px;
+  transition: 0.35s;
+}
+header .inner .bottomgnb .lnb > ul {
+  display: flex;
+}
+header .inner .bottomgnb .rnb {
+  display: flex;
+}
+header .inner .bottomgnb .rnb:hover li.main.on {
+  padding-left: 40px;
+  transition: 0.35s;
+}
+header .inner .bottomgnb .rnb > ul {
+  display: flex;
+}
+header .inner .bottomgnb .rnb > ul > ul {
+  display: flex;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+}
+
+#sect4 .slideContainer {
+  overflow: hidden;
+  width: 710px;
+  height: 710px;
+  margin: auto;
+}
+#sect4 .slideContainer .slideWrap {
+  position: relative;
+  display: flex;
+  transition: 0.35s cubic-bezier(0.42, 0, 1, 1);
+}
+#sect4 ul.menu {
+  position: absolute;
+  left: 50%;
+  margin-left: 440px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#sect4 ul.menu li {
+  height: 144px;
+}
