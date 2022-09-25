@@ -6,9 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>에이스침대</title>
     <link rel="stylesheet" href="index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="index.js" defer></script>
+    <script src="sect2.js" defer></script>
+    <script src="sect3.js" defer></script>
     <script src="sect4.js" defer></script>
 </head>
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+        position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    
+
+    .swiper-slide {
+      width: 80%;
+    }
+
+  </style>
 <body>
     <header>
         <div class="inner">
@@ -141,8 +204,81 @@
         </div>
     </header>
     <section id="sect1"></section>
-    <section id="sect2"></section>
-    <section id="sect3"></section>
+    <section id="sect2">
+        <h2>ACE SCIENCE</h2>
+        <ul class="page">
+            <li><a href="#" class="on">HYBRID Z SPRING</a></li>
+            <li><a href="#">5 FREE SYSTEM</a></li>
+            <li><a href="#">NEW MATERIAL</a></li>
+            <li><a href="#">ECO & HEALTH</a></li>
+        </ul>
+        <div class="videoContainer">
+            <ul class="videoWrap">
+                <li class="video"><video src="./movie/1440_bg01.mp4" loop autoplay muted></video></li>
+                <li class="video"><video src="./movie/1440_bg02.mp4" loop autoplay muted></video></li>
+                <li class="video"><video src="./movie/1440_bg03.mp4" loop autoplay muted></video></li>
+                <li class="video"><video src="./movie/1440_bg04.mp4" loop autoplay muted></video></li>
+            </ul>
+        </div>
+        <div class="verticalContainer">
+            <div class="verticalWrap">
+                <div class="verticalSlide">
+                    <h2>오늘밤 어떤 스프링으로 <br> 만든 침대에서 <br> 주무시겠습니까?</h2>
+                    <p>최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한 신소재만을 사용합니다</p>
+                </div>
+                <div class="verticalSlide">
+                    <h2>휴식을 방해하는 <br> 모든것이 사라지는 순간, <br>
+                    완벽한 편안함이 <br>
+                    시작됩니다.</h2>
+                    <p>꺼짐, 빈틈, 쏠림, 소음, 흔들림으로부터 자유롭게! 어떤 몸 상태에도 적용되는 5 FREE SYSTEM으로 최상의 숙면 조건을 만듭니다.</p>
+                </div>
+                <div class="verticalSlide">
+                    <h2>시원하게, 위생적으로 <br>
+                    최고의 잠을 위한<br>
+                    새로운 기술</h2>
+                    <p>최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한 신소재만을 사용합니다.</p>
+                </div>
+                <div class="verticalSlide">
+                    <h2>피부에 가까운 만큼 <br>
+                    더욱 안전하게 <br>
+                당신의 하루가 건강해집니다.</h2>
+                <p>최고 품질을 위해 중요한 소재 하나하나까지 직접 개발, 생산한 신소재만을 사용합니다</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="arrow prev stop"><img src="./img/211689_left_arrow_icon.png" alt=""></a>
+        <a href="#" class="arrow next"><img src="./img/211607_right_arrow_icon.png" alt=""></a>
+    </section>
+    <section id="sect3">
+        <h2>ACE COLLECTION</h2>
+        <ul class="sect3Tab">
+            <li class="tab">신제품</li>
+            <li> | </li>
+            <li class="tab">추천제품</li>
+        </ul>
+        <div class="swiperContainer">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/22033005470034886752.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/22082303221307905871.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/22052302370787653582.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/21060711210356284480.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/21082412094878220263.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/21083109490885751598.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
     <section id="sect4">
         <h2>ACE News</h2>
         <div class="inner">
