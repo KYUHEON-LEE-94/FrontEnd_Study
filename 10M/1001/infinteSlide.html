@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        .slideContainerP{
+            width: 640px;
+            margin: auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .slideWrap{
+            display: flex;
+            width: 100%;
+        }
+        .slide{position: relative;
+            width: 20%;}
+        .slide:nth-child(3){
+            border: 3px solid #000;
+        }
+        .slide img{
+            height:  300px; width: 100%;}
+        .arrow{
+            position: absolute;            
+            top: 50%;
+        }
+        .prev{
+            left: 100px;
+        }
+        .next{
+            right: 100px;
+        }
+        h2{
+            color: aqua;
+            position: absolute;
+            font-size: 100px;
+            left: 0;
+            top: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="slideContainer">
+        <div class="slideWrap">
+            <div class="slide"><img src="./FTERIMG/main_kv_10.jpg" alt=""><h2>5</h2></div>
+            <div class="slide"><img src="./FTERIMG/main_kv_11.jpg" alt=""><h2>1</h2></div>
+            <div class="slide"><img src="./FTERIMG/main_kv_12.jpg" alt=""><h2>2</h2></div>
+            <div class="slide"><img src="./FTERIMG/main_kv_13.jpg" alt=""><h2>3</h2></div>
+            <div class="slide"><img src="./FTERIMG/main_kv_14.jpg" alt=""><h2>4</h2></div>
+        </div>`
+    </div>
+</body>
+<a href="#" class="arrow prev"><img src="./FTERIMG/btn_prev_web.png" alt=""></a>
+<a href="#" class="arrow next"><img src="./FTERIMG/btn_next_web.png" alt=""></a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $('.next').click(function(e){
+        e.preventDefault();
+        $('.slideWrap').animate({'left':"-10%"}, function(){
+            $('.slideWrap .slide:first').appendTo('.slideWrap')
+            $('.slideWrap').css({'left':"-5%"})
+
+        })
+    })
+    $('.prev').click(function(e){
+        e.preventDefault();
+        $('.slideWrap').animate({'left':"10%"}, function(){
+            $('.slideWrap .slide:last').prependTo('.slideWrap')
+            $('.slideWrap').css({'left':"5%"})
+
+        })
+    })
+</script>
+</html>
