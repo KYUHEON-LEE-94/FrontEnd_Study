@@ -1,0 +1,64 @@
+@import "/reset.css";
+a.arrow {
+  position: absolute;
+  bottom: 10%;
+  &.prev {
+    left: 5%;
+  }
+  &.next {
+    right: 5%;
+  }
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.slideWrap {
+  
+  position: relative;
+}
+.slide {
+  cursor: pointer;
+}
+.slide img {
+  width: 100%;
+  vertical-align: top;
+}
+a.allBtn{
+
+    display: block;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    width: 40px;height: 40px;
+    background-image: url(./img/btn_list.png);
+}
+a.allBtn:hover{ background-image: url(./img/btn_list_on.png);}
+a.allBtn.on{
+    background-image: url(./img/btn_list2.png);
+} 
+@media screen and (max-width: 580px) {
+  a.arrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 581px) {
+    .container{
+        width: 50%;
+    }
+  .slideWrap {
+    display: flex;
+    width: 1000%;
+    flex-wrap: wrap;
+  }
+  .slide {
+    width: 10%;
+  }
+}
+@media screen and (min-width: 1020px) {
+    .container{
+        width: 25%;
+    }
+}

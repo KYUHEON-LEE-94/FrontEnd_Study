@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        .slideContainer{width: 640px;margin: auto;
+        border: 10px solid #000;position: relative;}
+        .slideWrap{display: flex;width: 500%;position: relative;
+        left: -100%;
+        }
+        .slide{width: 20%;position: relative;}
+        .slide img{height: 400px;width: 100%;}
+        a.prev{position: absolute;top:50%;left:-100px;transform: translateY(-50%);}
+        a.next{position: absolute;top:50%;right:-100px;transform: translateY(-50%);}
+        h2{position: absolute;font-size: 100px;left: 0;top:0;color:aqua}
+    </style>
+</head>
+<body>
+    
+<div class="slideContainer">
+    <div class="slideWrap">
+        <div class="slide"><img src="./img/main_kv_31.jpg" alt="">
+        <h2>5</h2>
+        </div>
+        <div class="slide"><img src="./img/main_kv_32.jpg" alt="">
+            <h2>1</h2>
+        </div>
+        <div class="slide"><img src="./img/main_kv_30.jpg" alt="">
+            <h2>2</h2>
+        </div>
+        <div class="slide"><img src="./img/main_kv_29.jpg" alt="">
+            <h2>3</h2>
+        </div>
+        <div class="slide"><img src="./img/main_kv_5.jpg" alt="">
+            <h2>4</h2>
+        </div>
+    </div>
+    <a href="#" class="arrow prev"><img src="./img/btn_prev_web.png" alt=""></a>
+    <a href="#" class="arrow next"><img src="./img/btn_next_web.png" alt=""></a>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $('.next').click(function(e){
+            e.preventDefault()
+            $('.slideWrap').animate({'left':"-200%"},function(){
+                $('.slideWrap .slide:first').appendTo('.slideWrap')
+                $('.slideWrap').css({'left':"-100%"})
+            })
+     
+        })
+        $('.prev').click(function(e){
+            e.preventDefault()
+            $('.slideWrap').animate({'left':"0"},function(){
+                $('.slideWrap .slide:last').prependTo('.slideWrap')
+                $('.slideWrap').css({'left':"-100%"})
+            })
+        })
+    </script>
+</body>
+</html>
