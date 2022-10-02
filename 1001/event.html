@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 200vh;
+    }
+</style>
+<body>
+
+    <input type="button" value="두 수를 입력하세요" id="inputData">
+    <span id="result">결과값</span>
+</body>
+<script>
+    //id는 queryselector를 하지않아도 js에서 바로 인식가능함
+    inputData.onclick = function add(){
+        let x = Number(prompt('x값 입력: ', 0));
+        let y = Number(prompt('y값 입력: ', 0));
+        result.innerHTML = `합계는${x+y}`
+    }
+    function init(){
+        inputData.onclick = add();
+    }
+   
+    const scrollEventListner = () =>{
+        window.addEventListener("wheel", WheelEvent)
+    }
+    const remove = () =>{
+        window.removeEventListener("wheel", WheelEvent)
+    }
+    
+    window.onwheel = remove();
+
+</script>
+</html>
