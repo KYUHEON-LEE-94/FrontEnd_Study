@@ -57,6 +57,12 @@
             opacity: .5;
             pointer-events: none;
         }
+
+        .input-field button.active{
+            opacity: 1;
+            pointer-events: auto;
+        }
+
         .input-field button:hover{
             opacity: 1;
         }
@@ -111,6 +117,7 @@
         footer button.active{
             opacity: 1;
             position: auto;
+            pointer-events: auto;
         }
     </style>
 </head>
@@ -118,16 +125,16 @@
     <div class="card">
         <h1 class="title">할일목록</h1>
         <div class="input-field">
-            <input type="text" placeholder="할일입력">
-            <button><i class="fa-sharp fa-solid fa-plus"></i></button>
+            <input id="input-box" type="text" placeholder="할일입력">
+            <button id="add-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
         </div>
-        <ul class="todo-list">
+        <ul class="todo-list" id="todo-list">
             <li>javascript<i class="fa-solid fa-minus icon"></i>
             </li>
         </ul>
         <footer>
-            <span>전체할일: <span>0</span></span>
-            <button>전체 삭제</button>
+            <span>전체할일: <span id="todo-count">1</span></span>
+            <button id="clear-all">전체 삭제</button>
         </footer>
     </div>
     <script src="jstodo.js"></script>
